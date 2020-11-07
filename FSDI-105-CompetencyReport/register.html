@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6da635e2db.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <title>Register</title>
+
+</head>
+
+<body>
+    <header>
+        <img id="header-img" class="header-img" src="" alt="">
+        <h1>The Fashion Pet</h1>
+    </header>
+
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="register.html">Register</a>
+        <!--Dont move this -->
+    </nav>
+
+    <main class="container">
+        <form action="">
+
+            <p class="form-group">
+                <label for="name">Name:</label>
+                <input name="name" class="form-control" type="text" id="petName">
+            </p>
+
+            <p class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" name="age" id="petAge">
+            </p>
+
+            <p class="form-group">
+                <label for="gender">Gender:</label>
+                <select name="services" class="form-control" id="petGender">
+                    <option value="" disabled selected> ---- Select Gender ---- </option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+
+            </p>
+
+            <p class="form-group">
+                <label for="type">Type:</label>
+                <input type="text" class="form-control" id="petType">
+
+
+            </p>
+
+            <p class="form-group">
+                <label for="breed">Breed:</label>
+                <input type="text" class="form-control" id="petBreed">
+            </p>
+
+            <p class="form-group">
+                <label for="immunizations">Immunizations:</label>
+                <select name="immunizations" class="form-control" id="petImmunizations">
+                    <option value="" disabled selected> ---- Immunizations ---- </option>
+                    <option value="Current">Current</option>
+                    <option value="Need Updates">Need Updates</option>
+                    <option value="Not Available">Not Available</option>
+                </select>
+            </p>
+
+            <p class="form-group">
+                <label for="sterile">Sterile:</label>
+                <select name="sterile" class="form-control" id="petSterile">
+                    <option value="" disabled selected> ---- Spay/Neuter ---- </option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+            </p>
+
+            <p class="form-group">
+                <label for="services">Services:</label>
+                <select name="services" class="form-control" id="petService">
+                    <option value="" disabled selected> ---- Select a Service ---- </option>
+                    <option value="Shower">Shower</option>
+                    <option value="Hair Cut">Hair Cut</option>
+                    <option value="Nails Cut">Nails Cut</option>
+                    <option value="Full Servics">Full Service</option>
+                </select>
+            </p>
+
+            <p class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" class="form-control" id="servicePrice">
+            </p>
+
+            <p class="form-group">
+                <label for="Oname">Owner's Name:</label>
+                <input type="text" class="form-control" id="ownersName">
+            </p>
+
+            <p class="form-group">
+                <label for="contact">Contact Phone:</label>
+                <input type="text" class="form-control" id="contactPhone">
+            </p>
+            <!--ENTER THE MODIFICATION FOR THE JQUERY REGISTER-->
+            <input type="button" class="btn btn-success" value="Register" onclick="register()">
+
+
+
+        </form>
+
+    </main>
+
+    <div id="gen-info" class="general-info">
+        <p id="registeredPets"></p>
+        <p id="profits"></p>
+
+    </div>
+
+    <!--<div id="pets">
+    </div>-->
+    <div>
+        <!--ENTER THE MODIFICATION FOR THE JQUERY SEARCH-->
+
+        <input type="text" name="search" id=petSearch>
+        <button id="btn-search" class="btn btn-success">Search</button>
+    </div>
+
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Type</th>
+            <th>Breed</th>
+            <th>Immunizations</th>
+            <th>Sterile</th>
+            <th>Services</th>
+            <th>Price</th>
+            <th>Owner's Name</th>
+            <th>Contact Phone</th>
+        </thead>
+        <tbody id="petTable"></tbody>
+
+    </table>
+
+    <footer>
+        <p id="footer-info"></p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script src="js/directory.js"></script>
+
+</body>
+
+</html>
